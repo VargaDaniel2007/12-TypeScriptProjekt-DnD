@@ -37,7 +37,7 @@ export async function updateClass(id: string, updatedClass: Class): Promise<Clas
     const response = await fetch(`${url}/${id}`, {
         method: "PUT",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(updateClass)
+        body: JSON.stringify(updatedClass)
     });
     return await response.json();
 }
