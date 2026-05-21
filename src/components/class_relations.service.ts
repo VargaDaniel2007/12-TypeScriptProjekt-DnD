@@ -8,6 +8,6 @@ export async function getCharactersClass(charId: string): Promise<Class> {
     //A karakterhez megszerzi Class-át
     const char: Character = await fetch(`${charUrl}/${charId}`, {method: "GET"}).then(res => res.json());
 
-    const cl: Class = await fetch(`${classUrl}/${char.classId}`, {method: "GET"}).then(res => res.json());
+    const cl: Class = await fetch(`${classUrl}/${char.class_id}`, {method: "GET"}).then(res => res.json());
     return cl;
 }
