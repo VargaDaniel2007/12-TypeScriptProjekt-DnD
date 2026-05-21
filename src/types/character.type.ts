@@ -17,6 +17,7 @@
 export default interface Character{
     id?: string,
     name: string,
+    classId: string,
     ac: number,
     hp: number,
     strength: number,
