@@ -1,16 +1,16 @@
 # 12-TypeScriptProjekt-DnD
 
-character
+character \br
 name		string
 class
 AC		int
 HP		int
-str		int
-dex		int
-con		int
-int		int
-wis		int
-cha		int
+STRENGTH		int
+DEXTERITY		int
+CONSTITUTION		int
+INTELLIGENCE		int
+WISDOM		int
+CHARISMA		int
 inventory	string
 
 
