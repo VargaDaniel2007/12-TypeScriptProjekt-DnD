@@ -1,0 +1,19 @@
+.egy{
+    background-color: rgb(205, 176, 233);
+    width: 100px;
+    height: 100px;
+}
+.ketto{
+    background-color: rgb(176, 233, 188);
+    width: 100px;
+    height: 100px;
+}
+.harom{
+    background-color: rgb(233, 176, 203);
+    width: 100px;
+    height: 100px;
+}
+.container{
+    display: flex;
+    gap: 10px;
+}
