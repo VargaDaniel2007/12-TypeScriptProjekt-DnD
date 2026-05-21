@@ -1,6 +1,6 @@
 import type Class from "../types/class.type";
 
-const url = "http://localhost:3000/classes";
+const url = "http://localhost:3241/classes";
 
 export async function getClasses(): Promise<Class[]> {
     const response = await fetch(url);
