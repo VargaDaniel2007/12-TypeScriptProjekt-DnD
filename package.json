@@ -4,9 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5684",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "node dev.js"
   },
   "devDependencies": {
     "typescript": "~5.8.3",
