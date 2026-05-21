@@ -1,7 +1,7 @@
 {
     "characters":[
         {
-            "id":1,
+            "id":"1",
             "name": "Bob",
             "AC": 10,
             "HP": 6,
@@ -14,7 +14,7 @@
             "inventory": ""
         },
         {
-            "id":2,
+            "id":"2",
             "name": "Alice",
             "AC": 12,
             "HP": 8,
@@ -29,14 +29,14 @@
     ],
     "classes":[
         {
-            "id":1,
+            "id":"1",
             "name": "Fighter",
             "hit_die": 10,
             "actions":"",
             "features":""
         },
         {
-            "id":2,
+            "id":"2",
             "name": "Wizard",
             "hit_die": 6,
             "actions":"",
@@ -45,12 +45,12 @@
     ],
     "class_relations":[
         {
-            "id":1,
+            "id":"1",
             "character_id": "1",
             "class_id": "1"
         },
         {
-            "id":2,
+            "id":"2",
             "character_id": "2",
             "class_id": "2"
         }
