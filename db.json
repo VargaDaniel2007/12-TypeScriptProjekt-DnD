@@ -1,0 +1,58 @@
+{
+    "characters":[
+        {
+            "id":1,
+            "name": "Bob",
+            "AC": 10,
+            "HP": 6,
+            "strength": 10,
+            "dexterity": 10,
+            "constitution": 10,
+            "intelligence": 10,
+            "wisdom": 10,
+            "charisma": 10,
+            "inventory": ""
+        },
+        {
+            "id":2,
+            "name": "Alice",
+            "AC": 12,
+            "HP": 8,
+            "strength": 12,
+            "dexterity": 14,
+            "constitution": 10,
+            "intelligence": 10,
+            "wisdom": 10,
+            "charisma": 10,
+            "inventory": ""
+        }
+    ],
+    "classes":[
+        {
+            "id":1,
+            "name": "Fighter",
+            "hit_die": 10,
+            "actions":"",
+            "features":""
+        },
+        {
+            "id":2,
+            "name": "Wizard",
+            "hit_die": 6,
+            "actions":"",
+            "features":""
+        }
+    ],
+    "class_relations":[
+        {
+            "id":1,
+            "character_id": "1",
+            "class_id": "1"
+        },
+        {
+            "id":2,
+            "character_id": "2",
+            "class_id": "2"
+        }
+    ]
+}
