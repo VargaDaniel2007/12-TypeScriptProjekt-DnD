@@ -1,6 +1,6 @@
 import type Character from "../types/character.type";
 
-const url = "http://localhost:3000/characters";
+const url = "http://localhost:3241/characters";
 
 export async function getCharacterList(): Promise<Character[]> {
     const response = await fetch(url);
