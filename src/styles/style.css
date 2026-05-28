@@ -97,25 +97,13 @@ body {
     width: 200px;
 }
 
-
-
-#details{
-    width: 50%;
-    border-right: #061138 solid 1px;
-    height: 100%;
-}
-#list{
-    width: 50%;
-    border-left: #061138 solid 1px;
-    height: 100%;
-}
-#main li{
-    border-bottom: #061138 solid 2px;
-    list-style: none;
-    padding: 30px;
-    font-size: 30px;
-}
 #main ul{
     padding: 0px;
     margin: 0px;
+;
+}
+.kartya{
+    height: 300px;
+    margin: 1%;
+    width: 23%;
 }
