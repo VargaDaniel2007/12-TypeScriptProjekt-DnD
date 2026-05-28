@@ -97,13 +97,35 @@ body {
     width: 200px;
 }
 
-#main ul{
+#main ul {
     padding: 0px;
     margin: 0px;
-;
+    ;
 }
-.kartya{
-    height: 300px;
-    margin: 1%;
-    width: 23%;
+
+.kartya {
+    height: 150px;
+    padding: 5px;
+}
+
+.mainButtons {
+    width: 100%;
+}
+
+
+
+.mainButtons div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    float: left;
+    flex-direction: column;
+    border-radius: 50%;
+}
+
+.card-body .row div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

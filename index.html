@@ -30,54 +30,66 @@
     </div>
 
     <div id="main">
+
+        <!--    <div class="container mainButtons">
+                <div class="row">
+                    <div id="characterButton" class="col-6">
+                        <input type="image" src="/src/images/placeholderIconImage.png" name="charButton">
+                        <label for="charButton">Characters</label>
+                    </div>
+                    <div id="classButton" class="col-6">
+                        <input type="image" src="/src/images/placeholderIconImage.png" name="classButton">
+                        <label for="classButton">Class</label>
+                    </div>
+                </div>
+            </div>-->
+
+
+        <!--
+            "name": "Alice",
+            "AC": 12,
+            "HP": 8,
+            "strength": 12,
+            "dexterity": 14,
+            "constitution": 10,
+            "intelligence": 10,
+            "wisdom": 10,
+            "charisma": 10,
+            "inventory": ""
+-->
+
+
+
         <div class="container">
             <div id="list" class="row">
 
 
 
 
-                <div class="card col-3 kartya">
-                    <div class="card-body">
-                        <h3 class="card-title">Név</h3>
-                        <h6 class="card-subtle">valami</h6>
-                        <p class="card-text">még valami</p>
+
+
+                <div class="col-sm-6 col-md-3 kartya">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Name</h3>
+                            <h6 class="card-subtle">Class</h6>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p class="card-text">AC:10</p>
+                                </div>
+                                <div class="col-6">
+                                    <p class="card-text">HP:10</p>
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
+
                 </div>
-                <div class="card col-3 kartya">
-                    <div class="card-body">
-                        <h3 class="card-title">Név</h3>
-                        <h6 class="card-subtle">valami</h6>
-                        <p class="card-text">még valami</p>
-                    </div>
-                </div>
-                <div class="card col-3 kartya">
-                    <div class="card-body">
-                        <h3 class="card-title">Név</h3>
-                        <h6 class="card-subtle">valami</h6>
-                        <p class="card-text">még valami</p>
-                    </div>
-                </div>
-                <div class="card col-3 kartya">
-                    <div class="card-body">
-                        <h3 class="card-title">Név</h3>
-                        <h6 class="card-subtle">valami</h6>
-                        <p class="card-text">még valami</p>
-                    </div>
-                </div>
-                <div class="card col-3 kartya">
-                    <div class="card-body">
-                        <h3 class="card-title">Név</h3>
-                        <h6 class="card-subtle">valami</h6>
-                        <p class="card-text">még valami</p>
-                    </div>
-                </div>
-                <div class="card col-3 kartya">
-                    <div class="card-body">
-                        <h3 class="card-title">Név</h3>
-                        <h6 class="card-subtle">valami</h6>
-                        <p class="card-text">még valami</p>
-                    </div>
-                </div>
+                
+
+
 
 
             </div>
@@ -94,9 +106,9 @@
 
 
     </div>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button>
 
 
     <script src="/src/components/bootstrap.min.js"></script>
