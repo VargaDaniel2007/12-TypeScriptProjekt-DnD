@@ -32,10 +32,6 @@
     <div id="main">
         <div class="container">
             <div id="list" class="row">
-
-
-
-
                 <div class="card col-3 kartya">
                     <div class="card-body">
                         <h3 class="card-title">Név</h3>
@@ -83,20 +79,124 @@
             </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
     </div>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createNewClassModal">
+      Create new
+    </button>
+
+<!-- Character Modal -->
+<div class="modal fade" id="createNewCharacterModal" tabindex="-1" aria-labelledby="createNew" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="createNewCharacterModalLabel">New Character</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newChar-name" class="col-form-label">Character name</label></div>
+                <div class="col-auto"><input type="text" name="newCharName" id="newChar-name" class="form-control"></div>
+            </div>
+
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newChar-class" class="col-form-label">Characters' class</label></div>
+                <div class="col-auto"><input type="text" name="newCharclass" id="newChar-class" class="form-control"></div>
+            </div>
+
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newChar-ac" class="col-form-label">Ac ?</label></div>
+                <div class="col-auto"><input type="number" min="0" name="newCharAc" id="newChar-ac" class="form-control"></div>
+            </div>
+
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newChar-hp" class="col-form-label">Characters' health</label></div>
+                <div class="col-auto"><input type="number" min="0" name="newCharHp" id="newChar-hp" class="form-control"></div>
+            </div>
+
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newChar-str" class="col-form-label">Characters' strength</label></div>
+                <div class="col-auto"><input type="number" min="0" name="newCharStrength" id="newChar-str" class="form-control"></div>
+            </div>
+
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newChar-dext" class="col-form-label">Characters' dexterity</label></div>
+                <div class="col-auto"><input type="number" min="0" name="newCharDexterity" id="newChar-dext" class="form-control"></div>
+            </div>
+
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newChar-const" class="col-form-label">Characters' constitution</label></div>
+                <div class="col-auto"><input type="number" min="0" name="newCharConstitution" id="newChar-const" class="form-control"></div>
+            </div>
+
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newChar-int" class="col-form-label">Characters' intelligence</label></div>
+                <div class="col-auto"><input type="number" min="0" name="newCharIntelligence" id="newChar-int" class="form-control"></div>
+            </div>
+
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newChar-wisd" class="col-form-label">Characters' wisdom</label></div>
+                <div class="col-auto"><input type="number" min="0" name="newCharWisdom" id="newChar-wisd" class="form-control"></div>
+            </div>
+
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newChar-char" class="col-form-label">Characters' charisma</label></div>
+                <div class="col-auto"><input type="number" min="0" name="newCharCharisma" id="newChar-char" class="form-control"></div>
+            </div>
+
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newChar-inv" class="col-form-label">Characters' inventory</label></div>
+                <div class="col-auto"><input type="text" name="newCharinventory" id="newChar-inv" class="form-control"></div>
+            </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Class modal -->
+<div class="modal fade" id="createNewClassModal" tabindex="-1" aria-labelledby="createNewClassModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="createNewClassModalLabel">New Class</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newClass-name" class="col-form-label">Class' name</label></div>
+                <div class="col-auto"><input type="text" name="newClassName" id="newClass-name" class="form-control"></div>
+            </div>
+
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newClass-htd" class="col-form-label">Hit to Die</label></div>
+                <div class="col-auto"><input type="number" min="0" name="newClassHitToDie" id="newClass-htd" class="form-control"></div>
+            </div>
+
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newClass-action" class="col-form-label">Class' action</label></div>
+                <div class="col-auto"><input type="text" name="newClassAction" id="newClass-action" class="form-control"></div>
+            </div>
+
+            <div class="row justify-content-between w-100 mb-2">
+                <div class="col-auto"><label for="newClass-features" class="col-form-label">Class' features</label></div>
+                <div class="col-auto"><input type="text" name="newClassFeatures" id="newClass-features" class="form-control"></div>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
     <script src="/src/components/bootstrap.min.js"></script>
