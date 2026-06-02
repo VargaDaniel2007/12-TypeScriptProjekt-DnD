@@ -37,24 +37,20 @@ export async function renderCard(character: Character) {
     modal.innerHTML = `
     <div class="modal-dialog">
         <div class="modal-content">
-        <div class="modal-header">
-            <h1 class="modal-title fs-5" id="${character.id}ModalLabel">${character.name} (${((await getClass(character.class_id)).name)})</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <p class="my-1">Armor Class: ${character.ac}</p>
-            <p class="my-1">Health Points: ${character.hp}</p>
-            <p class="my-1">Strength: ${character.strength}</p>
-            <p class="my-1">Dexterity: ${character.dexterity}</p>
-            <p class="my-1">Constitution: ${character.constitution}</p>
-            <p class="my-1">Intelligence: ${character.intelligence}</p>
-            <p class="my-1">Wisdom: ${character.wisdom}</p>
-            <p class="my-1">Charisma: ${character.charisma}</p>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="${character.id}ModalLabel">${character.name} (${((await getClass(character.class_id)).name)})</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="my-1">Armor Class: ${character.ac}</p>
+                <p class="my-1">Health Points: ${character.hp}</p>
+                <p class="my-1">Strength: ${character.strength}</p>
+                <p class="my-1">Dexterity: ${character.dexterity}</p>
+                <p class="my-1">Constitution: ${character.constitution}</p>
+                <p class="my-1">Intelligence: ${character.intelligence}</p>
+                <p class="my-1">Wisdom: ${character.wisdom}</p>
+                <p class="my-1">Charisma: ${character.charisma}</p>
+            </div>
         </div>
     </div>`;
 
