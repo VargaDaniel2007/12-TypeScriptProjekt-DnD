@@ -58,4 +58,4 @@ function renderCard(character: Character) {
     main.appendChild(border);
 }
 
-load();
+// load();

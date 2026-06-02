@@ -18,15 +18,11 @@ body {
 }
 
 
-@font-face {
-    font-family: HeaderFont;
-    src: url(src/fonts/IcelandWinterstorm_PERSONAL_USE_ONLY.otf);
-}
+
 
 #header h1 {
     color: #EEECE0;
     font-size: 110px;
-    font-family: HeaderFont;
 
 }
 
@@ -137,6 +133,7 @@ body {
 
 .mainButtons {
     width: 100%;
+    margin-top: 10%;
 }
 
 
@@ -164,8 +161,19 @@ body {
 }
 
 label {
-    color: #061138;
+    color: #79650d;
     font-size: 25px;
     font-weight: bold;
     margin-top: 10px;
+}
+
+
+
+#characterButton input, #classButton input {
+    width: 300px;
+    height: 300px;
+}
+
+.cradsDiv{
+    padding: 4%;
 }
