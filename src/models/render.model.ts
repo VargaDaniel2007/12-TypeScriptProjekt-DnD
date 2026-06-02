@@ -46,10 +46,8 @@ export async function renderCard(character: Character) {
                 <p class="my-1">Health Points: ${character.hp}</p>
                 <p class="my-1">Strength: ${character.strength}</p>
                 <p class="my-1">Dexterity: ${character.dexterity}</p>
-                <p class="my-1">Constitution: ${character.constitution}</p>
                 <p class="my-1">Intelligence: ${character.intelligence}</p>
                 <p class="my-1">Wisdom: ${character.wisdom}</p>
-                <p class="my-1">Charisma: ${character.charisma}</p>
             </div>
         </div>
     </div>`;
