@@ -29,5 +29,4 @@ function render() {
     selected == "charButton" ? Characters.forEach(renderCard) : Classes.forEach(renderClass);
 }
 
-
 load();
