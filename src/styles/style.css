@@ -17,7 +17,6 @@ body {
     display: flex;
 }
 
-
 @font-face {
     font-family: HeaderFont;
     src: url(/src/fonts/IcelandWinterstorm_PERSONAL_USE_ONLY.otf);
@@ -25,10 +24,10 @@ body {
 
 #header h1 {
     color: #EEECE0;
-    font-size: 50px;
+    font-size: 110px;
     font-family: HeaderFont;
-}
 
+}
 
 #iconDiv {
     width: 200px;
@@ -49,15 +48,11 @@ body {
 
 }
 
-
-
-
 #main {
     width: 100%;
     height: 1000px;
     background-color: #EEECE0;
     margin-top: 250px;
-    display: flex;
 }
 
 
@@ -79,10 +74,10 @@ body {
     margin: 10px;
 }
 
-
 .titleDiv {
-    width: 40%;
+    width: 100%;
 }
+
 
 .navDiv {
     display: flex;
@@ -100,11 +95,10 @@ body {
 #main ul {
     padding: 0px;
     margin: 0px;
-    ;
 }
 
 .kartya {
-    height: 150px;
+    height: 225px;
     padding: 5px;
 }
 
@@ -112,20 +106,54 @@ body {
     width: 100%;
 }
 
-
-
 .mainButtons div div {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 200px;
     float: left;
     flex-direction: column;
-    border-radius: 50%;
+
 }
 
 .card-body .row div {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.kerek {
+    border-radius: 50%;
+}
+
+label {
+    color: #061138;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (max-width: 1080px) {
+    #header h1 {
+        font-size: 90px;
+
+    }
+}
+@media (max-width: 920px) {
+    #header h1 {
+        font-size: 70px;
+
+    }
+}
+@media (max-width: 760px) {
+    #header h1 {
+        font-size: 50px;
+
+    }
+}
+@media (max-width: 433px) {
+    #header h1 {
+        font-size: 40px;
+
+    }
 }

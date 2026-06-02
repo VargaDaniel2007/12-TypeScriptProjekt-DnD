@@ -3,8 +3,9 @@
         {
             "id":"1",
             "name": "Bob",
-            "AC": 10,
-            "HP": 6,
+            "class_id": "1",
+            "ac": 10,
+            "hp": 6,
             "strength": 10,
             "dexterity": 10,
             "constitution": 10,
@@ -16,8 +17,9 @@
         {
             "id":"2",
             "name": "Alice",
-            "AC": 12,
-            "HP": 8,
+            "class_id": "2",
+            "ac": 12,
+            "hp": 8,
             "strength": 12,
             "dexterity": 14,
             "constitution": 10,
@@ -41,18 +43,6 @@
             "hit_die": 6,
             "actions":"",
             "features":""
-        }
-    ],
-    "class_relations":[
-        {
-            "id":"1",
-            "character_id": "1",
-            "class_id": "1"
-        },
-        {
-            "id":"2",
-            "character_id": "2",
-            "class_id": "2"
         }
     ]
 }
