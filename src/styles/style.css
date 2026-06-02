@@ -1,5 +1,5 @@
 body {
-    background-image: url(/src/images/placeholder\ body\ background.webp);
+    background-image: url(/src/images/il_1080xN.6460834967_k31o.webp);
     background-size: cover;
     padding: 0px;
     margin: 0px;
@@ -20,7 +20,7 @@ body {
 
 @font-face {
     font-family: HeaderFont;
-    src: url(/src/fonts/IcelandWinterstorm_PERSONAL_USE_ONLY.otf);
+    src: url(src/fonts/IcelandWinterstorm_PERSONAL_USE_ONLY.otf);
 }
 
 #header h1 {
@@ -35,7 +35,7 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 150px;
-    background-color: #485B51;
+    background-color: #EEECE0;
     z-index: 3;
     position: fixed;
     top: -40px;
@@ -44,9 +44,8 @@ body {
 }
 
 #iconDiv img {
-    height: 140px;
-    width: 140px;
-    margin: 40px 30px;
+    width: 120px;
+    margin: 42px 45px;
 
 }
 
