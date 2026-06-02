@@ -2,6 +2,7 @@ import { getClass } from "../components/class.service";
 import type Class from "./class.model";
 import type Character from "./character.model";
 import { deleteCharacter } from "../components/character.service";
+import { getCharactersClass } from "../components/class_relations.service";
 
 const cards = document.getElementById("cards") as HTMLDivElement;
 
@@ -17,7 +18,7 @@ export async function renderCard(character: Character) {
             <div class="card-body">
                 <p class="card-text my-0">Armor Class: ${character.ac}</p>
                 <p class="card-text mt-1 mb-3">Health Points: ${character.hp}</p>
-                <button class="btn btn-primary btn-warning">Edit</button>
+                <button class="btn btn-primary btn-warning" data-bs-toggle="modal" data-bs-target="#createNewCharacterModal">Edit</button>
                 <button class="btn btn-primary btn-danger">Delete</button>
             </div>
         </div>
@@ -25,6 +26,24 @@ export async function renderCard(character: Character) {
     (card.querySelector(".btn-danger") as HTMLButtonElement).addEventListener('click', async () => {
         if (confirm("Are you sure to want to delete the character") && character.id != undefined)
             await deleteCharacter(character.id);
+    });
+
+    (card.querySelector(".btn-warning") as HTMLButtonElement).addEventListener('click', async () => {
+        if(!character.id) return;
+
+        document.getElementById('newChar-save-btn')!.dataset.id = character.id;
+
+        const charClass: Class = await getCharactersClass(character.id);
+
+        (document.getElementById('newChar-name') as HTMLInputElement).value = character.name;
+        (document.getElementById('newChar-class') as HTMLInputElement).value = charClass.name;
+        (document.getElementById('newChar-ac') as HTMLInputElement).value = character.ac.toString();
+        (document.getElementById('newChar-hp') as HTMLInputElement).value = character.hp.toString();
+        (document.getElementById('newChar-str') as HTMLInputElement).value = character.strength.toString();
+        (document.getElementById('newChar-dext') as HTMLInputElement).value = character.dexterity.toString();
+        (document.getElementById('newChar-int') as HTMLInputElement).value = character.intelligence.toString();
+        (document.getElementById('newChar-wisd') as HTMLInputElement).value = character.wisdom.toString();
+        document.getElementById('newChar-save-btn')!.innerText = 'Save character';  //Doesn't change back TODO
     });
 
     const modal = document.createElement('div');
