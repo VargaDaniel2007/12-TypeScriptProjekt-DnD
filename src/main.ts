@@ -22,7 +22,6 @@ document.querySelectorAll('.select-button').forEach(e => {
 
 export async function load() {
     Classes = await getClasses();
-    console.log(Classes);
     Characters = await getCharacterList();
     render();
 }
@@ -80,10 +79,10 @@ document.getElementById('newClass-save-btn')!.addEventListener('click', async (e
     const id = (e.target as HTMLButtonElement).dataset.id
     if(id){
         charClass.id = id;
-        console.log(await updateClass(id, charClass));
+        await updateClass(id, charClass);
     }
     else{
-        console.log(await createClass(charClass));
+        await createClass(charClass);
     }
 
     document.getElementById('newClass-save-btn')!.dataset.id = "";
