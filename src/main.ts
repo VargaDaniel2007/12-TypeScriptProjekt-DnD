@@ -1,7 +1,7 @@
 import type Class from "./models/class.model";
 import type Character from "./models/character.model";
 import { createCharacter, getCharacterList, updateCharacter } from "./components/character.service";
-import { getClasses } from "./components/class.service";
+import { createClass, getClasses, updateClass } from "./components/class.service";
 import { renderCard, renderClass } from "./models/render.model";
 
 let Classes: Class[] = [];
@@ -20,8 +20,9 @@ document.querySelectorAll('.select-button').forEach(e => {
     })
 });
 
-async function load() {
+export async function load() {
     Classes = await getClasses();
+    console.log(Classes);
     Characters = await getCharacterList();
     render();
 }
@@ -33,7 +34,9 @@ function render() {
 
 createBtn.addEventListener('click', () => {
     (document.getElementById('newCharModal-form') as HTMLFormElement).reset();
+    (document.getElementById('newClassModal-form') as HTMLFormElement).reset();
     document.getElementById('newChar-save-btn')!.innerText = 'Create character';
+    document.getElementById('newClass-save-btn')!.innerText = 'Create class';
 });
 
 document.getElementById('newChar-save-btn')!.addEventListener('click', async () => {
@@ -51,22 +54,40 @@ document.getElementById('newChar-save-btn')!.addEventListener('click', async () 
         wisdom: Number(((document.getElementById('newChar-wisd') as HTMLInputElement)).value)
     }
     
-
     const id = document.getElementById('newChar-save-btn')!.dataset.id
-
     if(id){
         char.id = id;
-        console.log(await updateCharacter(id, char));
+        await updateCharacter(id, char);
         
     }
     else{
-        console.log(await createCharacter(char));
+        await createCharacter(char);
     }
-
-    (document.getElementById('newCharModal-form') as HTMLFormElement).reset();
 
     document.getElementById('newChar-save-btn')!.dataset.id = "";
     await load();
 });
 
-load();
+document.getElementById('newClass-save-btn')!.addEventListener('click', async (e) => {
+    let charClass:Class = {
+        name: (document.getElementById('newClass-name') as HTMLInputElement).value,
+        desc: (document.getElementById('newClass-desc') as HTMLInputElement).value,
+        hit_die: Number((document.getElementById('newClass-htd') as HTMLInputElement).value),
+        actions: (document.getElementById('newClass-action') as HTMLInputElement).value,
+        features: (document.getElementById('newClass-features') as HTMLInputElement).value
+    }
+
+    const id = (e.target as HTMLButtonElement).dataset.id
+    if(id){
+        charClass.id = id;
+        console.log(await updateClass(id, charClass));
+    }
+    else{
+        console.log(await createClass(charClass));
+    }
+
+    document.getElementById('newClass-save-btn')!.dataset.id = "";
+    await load();
+});
+
+await load();

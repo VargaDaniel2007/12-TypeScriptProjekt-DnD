@@ -1,48 +1,59 @@
 {
-    "characters":[
-        {
-            "id":"1",
-            "name": "Bob",
-            "class_id": "1",
-            "ac": 10,
-            "hp": 6,
-            "strength": 10,
-            "dexterity": 10,
-            "constitution": 10,
-            "intelligence": 10,
-            "wisdom": 10,
-            "charisma": 10,
-            "inventory": ""
-        },
-        {
-            "id":"2",
-            "name": "Alice",
-            "class_id": "2",
-            "ac": 12,
-            "hp": 8,
-            "strength": 12,
-            "dexterity": 14,
-            "constitution": 10,
-            "intelligence": 10,
-            "wisdom": 10,
-            "charisma": 10,
-            "inventory": ""
-        }
-    ],
-    "classes":[
-        {
-            "id":"1",
-            "name": "Fighter",
-            "hit_die": 10,
-            "actions":"",
-            "features":""
-        },
-        {
-            "id":"2",
-            "name": "Wizard",
-            "hit_die": 6,
-            "actions":"",
-            "features":""
-        }
-    ]
+  "characters": [
+    {
+      "id": "1",
+      "name": "Bob",
+      "class_id": "1",
+      "ac": 10,
+      "hp": 6,
+      "strength": 10,
+      "dexterity": 10,
+      "constitution": 10,
+      "intelligence": 10,
+      "wisdom": 10,
+      "charisma": 10,
+      "inventory": ""
+    },
+    {
+      "id": "2",
+      "name": "Alice",
+      "class_id": "2",
+      "ac": 12,
+      "hp": 8,
+      "strength": 12,
+      "dexterity": 14,
+      "constitution": 10,
+      "intelligence": 10,
+      "wisdom": 10,
+      "charisma": 10,
+      "inventory": ""
+    }
+  ],
+  "classes": [
+    {
+      "id": "1",
+      "name": "Fighter",
+      "desc": "",
+      "hit_die": 10,
+      "actions": "",
+      "features": ""
+    },
+    {
+      "id": "2",
+      "name": "Wizard",
+      "desc": "",
+      "hit_die": 6,
+      "actions": "",
+      "features": ""
+    },
+    {
+      "name": "Knight",
+      "desc": "A heavily armoured warrior",
+      "hit_die": 12,
+      "actions": "Sword attack",
+      "features": "Slow movement; Heavy attack",
+      "id": "b44--FIHJ6E"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
