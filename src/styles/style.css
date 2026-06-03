@@ -143,7 +143,6 @@ label {
     font-size: 40px;
     font-weight: bold;
     margin-top: 10px;
-    font-family: LabelFont;
 }
 
 @media (max-width: 1080px) {
@@ -200,7 +199,26 @@ label {
     border-color: #79650d;
     font-family: LabelFont;
     font-size: 30px;
+    width: 100px;
 }
-#create-btn{
+.specialBtn{
     margin: 30px;
+    width: 150px;
+}
+.btn:hover{
+    background-color: #061138;
+    color: #EEECE0;
+    border-color: #061138;
+}
+.createCharBtn{
+    width: 250px;
+}
+.card-header{
+    background-color: #061138;
+    color: #EEECE0;
+    font-size: 25px;
+}
+
+.mainButtons div div label{
+    font-family: LabelFont;
 }

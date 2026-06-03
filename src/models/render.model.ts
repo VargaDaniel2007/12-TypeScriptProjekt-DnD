@@ -19,8 +19,15 @@ export async function renderCard(character: Character) {
             <div class="card-body">
                 <p class="card-text my-0">Armor Class: ${character.ac}</p>
                 <p class="card-text mt-1 mb-3">Health Points: ${character.hp}</p>
-                <button class="btn btn-primary btn-warning" data-bs-toggle="modal" data-bs-target="#createNewCharacterModal">Edit</button>
-                <button class="btn btn-primary btn-danger">Delete</button>
+                
+                <div class="row">
+                <div class="col-6">
+                    <button class="btn btn-primary btn-warning" data-bs-toggle="modal" data-bs-target="#createNewCharacterModal">Edit</button>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-primary btn-danger">Delete</button>
+                </div>
+                </div>
             </div>
         </div>
     `;
@@ -89,8 +96,14 @@ export async function renderClass(characterClass: Class) {
             <div class="card-body">
                 <p class="card-text my-0">Hit to die: ${characterClass.hit_die}</p>
                 <p class="card-text mt-1 mb-3">Description: ${characterClass.desc}</p>
+                <div class="row">
+                <div class="col-6">
                 <button class="btn btn-primary btn-warning" data-bs-toggle="modal" data-bs-target="#createNewClassModal">Edit</button>
+                </div>
+                <div class="col-6">
                 <button class="btn btn-primary btn-danger">Delete</button>
+                </div>
+                </div>
             </div>
         </div>
     `;
