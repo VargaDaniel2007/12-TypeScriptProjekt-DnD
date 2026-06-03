@@ -11,7 +11,8 @@
 export default interface Class{
     id?: string,
     name: string,
-    hitDie: number,
+    desc: string,
+    hit_die: number,
     actions: string,
     features: string
 }

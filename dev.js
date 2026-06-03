@@ -6,7 +6,7 @@ const startProcess = (command, args) => {
 	proc.on('close', () => process.exit());
 };
 
-startProcess('json-server', ['--watch', 'db.json', '--port', '3241']);
+startProcess('json-server', ['db.json', '--port', '3241']);
 startProcess('vite', ['--port', '5684']);
 // "scripts": {
 //   "dev": "vite --port 5684",

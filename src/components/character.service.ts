@@ -1,4 +1,4 @@
-import type Character from "../types/character.type";
+import type Character from "../models/character.model";
 
 const url = "http://localhost:3241/characters";
 
