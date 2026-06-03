@@ -105,6 +105,7 @@ body {
 .card-div {
     height: 225px;
     padding: 5px;
+    margin-bottom: 20px;
 }
 
 .mainButtons {
@@ -132,11 +133,17 @@ body {
     border-radius: 50%;
 }
 
+@font-face {
+    font-family: LabelFont;
+    src: url("/src/fonts/Enchanted\ Land\ DEMO.otf");
+}
+
 label {
     color: #79650d;
-    font-size: 25px;
+    font-size: 40px;
     font-weight: bold;
     margin-top: 10px;
+    font-family: LabelFont;
 }
 
 @media (max-width: 1080px) {
@@ -185,3 +192,15 @@ label {
 .kartya{
     padding: 4%;
 } */
+
+.btn{
+    background-color: #5a132700;
+    color: #79650d;
+    border-radius: 0px;
+    border-color: #79650d;
+    font-family: LabelFont;
+    font-size: 30px;
+}
+#create-btn{
+    margin: 30px;
+}

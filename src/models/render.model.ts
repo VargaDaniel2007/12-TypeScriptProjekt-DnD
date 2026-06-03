@@ -11,7 +11,7 @@ export async function renderCard(character: Character) {
     const card = document.createElement('div');
     card.classList.add("col-sm-6", "col-md-4", "col-lg-3", "card-div");
     card.innerHTML = `
-        <div class="card h-100">
+        <div class="card">
             <div class="card-header" data-bs-toggle="modal" data-bs-target="#${character.id}Modal">
                 <h3 class="card-title">${character.name}</h3>
                 <h6 class="card-subtle mb-0">${(await getClass(character.class_id) as Class).name}</h6>
