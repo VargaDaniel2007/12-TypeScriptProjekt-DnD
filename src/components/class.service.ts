@@ -1,4 +1,4 @@
-import type Class from "../types/class.type";
+import type Class from "../models/class.model";
 
 const url = "http://localhost:3241/classes";
 

@@ -1,5 +1,5 @@
-import type Class from "../types/class.type";
-import type Character from "../types/character.type";
+import type Class from "../models/class.model";
+import type Character from "../models/character.model";
 
 const classUrl = "http://localhost:3241/classes";
 const charUrl = "http://localhost:3241/characters";

@@ -21,10 +21,7 @@ export default interface Character{
     ac: number,
     hp: number,
     strength: number,
-    dexterity: number,
-    constitution: number,
+    dexterity: number
     intelligence: number,
-    wisdom: number,
-    charisma: number,
-    inventory: string
+    wisdom: number
 }

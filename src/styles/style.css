@@ -17,15 +17,16 @@ body {
     display: flex;
 }
 
-
-
+@font-face {
+    font-family: HeaderFont;
+    src: url(/src/fonts/IcelandWinterstorm_PERSONAL_USE_ONLY.otf);
+}
 
 #header h1 {
     color: #EEECE0;
     font-size: 110px;
 
 }
-
 
 #iconDiv {
     width: 200px;
@@ -45,15 +46,11 @@ body {
 
 }
 
-
-
-
 #main {
     width: 100%;
     height: 1000px;
     background-color: #EEECE0;
     margin-top: 250px;
-    display: flex;
 }
 
 
@@ -75,9 +72,64 @@ body {
     margin: 10px;
 }
 
-
 .titleDiv {
     width: 100%;
+}
+
+
+.navDiv {
+    display: flex;
+}
+
+.navDiv div {
+    color: #EEECE0;
+    padding: 20px 0px;
+    font-size: 25px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 200px;
+}
+
+#main ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.kartya {
+    height: 225px;
+    padding: 5px;
+}
+
+.mainButtons {
+    width: 100%;
+    margin-top: 10%;
+}
+
+.mainButtons div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    float: left;
+    flex-direction: column;
+
+}
+
+.card-body .row div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kerek {
+    border-radius: 50%;
+}
+
+label {
+    color: #79650d;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 @media (max-width: 1080px) {
@@ -103,70 +155,6 @@ body {
         font-size: 40px;
 
     }
-}
-
-
-
-.navDiv {
-    display: flex;
-}
-
-.navDiv div {
-    color: #EEECE0;
-    padding: 20px 0px;
-    font-size: 25px;
-    text-align: center;
-    box-sizing: border-box;
-    width: 200px;
-}
-
-#main ul {
-    padding: 0px;
-    margin: 0px;
-    ;
-}
-
-.kartya {
-    height: 150px;
-    padding: 5px;
-}
-
-.mainButtons {
-    width: 100%;
-    margin-top: 10%;
-}
-
-
-
-.mainButtons div div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    float: left;
-    flex-direction: column;
-
-}
-
-
-
-.card-body .row div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.kerek {
-    border-radius: 50%;
-}
-
-label {
-    color: #79650d;
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
 
 
 #characterButton input, #classButton input {

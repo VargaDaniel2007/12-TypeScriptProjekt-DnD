@@ -1,61 +1,92 @@
-import type Class from "./types/class.type";
-import type Character from "./types/character.type";
-import { getCharacterList } from "./components/character.service";
-import { getClasses } from "./components/class.service";
+import type Class from "./models/class.model";
+import type Character from "./models/character.model";
+import { createCharacter, getCharacterList, updateCharacter } from "./components/character.service";
+import { createClass, getClasses, updateClass } from "./components/class.service";
+import { renderCard, renderClass } from "./models/render.model";
 
 let Classes: Class[] = [];
 let Characters: Character[] = [];
 const main = document.getElementById("main") as HTMLDivElement;
+const cards = document.getElementById("cards") as HTMLDivElement;
+const createBtn = document.getElementById('create-btn') as HTMLButtonElement;
+let selected = "charButton";
 
-async function load() {
+document.querySelectorAll('.select-button').forEach(e => {
+    const element = e as HTMLInputElement;
+    element.addEventListener('click', () => {
+        selected = element.name;
+        createBtn.dataset.bsTarget = selected == 'charButton' ? "#createNewCharacterModal" : "#createNewClassModal"
+        render();
+    })
+});
+
+export async function load() {
     Classes = await getClasses();
     Characters = await getCharacterList();
     render();
 }
 
 function render() {
-    main.innerHTML = "";
-    Characters.forEach(renderCard);
+    cards.innerHTML = "";
+    selected == "charButton" ? Characters.forEach(renderCard) : Classes.forEach(renderClass);
 }
 
-function renderCard(character: Character) {
-    //  <div class="col-sm-6 col-md-3 kartya">
-    //     <div class="card h-100">
-    //         <div class="card-body">
-    //             <h3 class="card-title">Name</h3>
-    //             <h6 class="card-subtle">Class</h6>
-    //             <div class="row">
-    //                 <div class="col-6">
-    //                     <p class="card-text">AC:10</p>
-    //                 </div>
-    //                 <div class="col-6">
-    //                     <p class="card-text">HP:10</p>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </div>
-    // </div>
+createBtn.addEventListener('click', () => {
+    (document.getElementById('newCharModal-form') as HTMLFormElement).reset();
+    (document.getElementById('newClassModal-form') as HTMLFormElement).reset();
+    document.getElementById('newChar-save-btn')!.innerText = 'Create character';
+    document.getElementById('newClass-save-btn')!.innerText = 'Create class';
+});
 
-    const border = document.createElement('div');
-    border.classList.add("col-sm-6", "col-md-3", "kartya");
-    const card = document.createElement('div');
-    card.classList.add("card", "h-100");
-    const body = document.createElement('div');
-    body.classList.add("card-body");
+document.getElementById('newChar-save-btn')!.addEventListener('click', async () => {
 
-    const title = document.createElement('h3');
-    title.classList.add('card-title');
-    title.innerText = character.name;
-    body.appendChild(title);
+    const className = (document.getElementById('newChar-class') as HTMLInputElement).value
+    const classId = (await getClasses()).find(c => c.name == className)!.id;
+    let char: Character = {
+        name: (document.getElementById('newChar-name') as HTMLInputElement).value,
+        class_id: classId ?? "",
+        ac: Number((document.getElementById('newChar-ac') as HTMLInputElement).value),
+        hp: Number((document.getElementById('newChar-hp') as HTMLInputElement).value),
+        strength: Number((document.getElementById('newChar-str') as HTMLInputElement).value),
+        dexterity: Number((document.getElementById('newChar-dext') as HTMLInputElement).value),
+        intelligence: Number((document.getElementById('newChar-int') as HTMLInputElement).value),
+        wisdom: Number(((document.getElementById('newChar-wisd') as HTMLInputElement)).value)
+    }
+    
+    const id = document.getElementById('newChar-save-btn')!.dataset.id
+    if(id){
+        char.id = id;
+        await updateCharacter(id, char);
+        
+    }
+    else{
+        await createCharacter(char);
+    }
 
-    const subtle = document.createElement('h6');
-    subtle.classList.add('card-subtle');
-    subtle.innerText = Classes.find(x => x.id == character.class_id)?.name ?? "unknown";
-    body.appendChild(subtle);
+    document.getElementById('newChar-save-btn')!.dataset.id = "";
+    await load();
+});
 
-    card.appendChild(body);
-    border.appendChild(card);
-    main.appendChild(border);
-}
+document.getElementById('newClass-save-btn')!.addEventListener('click', async (e) => {
+    let charClass:Class = {
+        name: (document.getElementById('newClass-name') as HTMLInputElement).value,
+        desc: (document.getElementById('newClass-desc') as HTMLInputElement).value,
+        hit_die: Number((document.getElementById('newClass-htd') as HTMLInputElement).value),
+        actions: (document.getElementById('newClass-action') as HTMLInputElement).value,
+        features: (document.getElementById('newClass-features') as HTMLInputElement).value
+    }
 
-// load();
+    const id = (e.target as HTMLButtonElement).dataset.id
+    if(id){
+        charClass.id = id;
+        await updateClass(id, charClass);
+    }
+    else{
+        await createClass(charClass);
+    }
+
+    document.getElementById('newClass-save-btn')!.dataset.id = "";
+    await load();
+});
+
+await load();
