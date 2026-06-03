@@ -1,5 +1,5 @@
 body {
-    background-image: url(/src/images/placeholder\ body\ background.webp);
+    background-image: url(/src/images/il_1080xN.6460834967_k31o.webp);
     background-size: cover;
     padding: 0px;
     margin: 0px;
@@ -25,7 +25,6 @@ body {
 #header h1 {
     color: #EEECE0;
     font-size: 110px;
-    font-family: HeaderFont;
 
 }
 
@@ -33,7 +32,7 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 150px;
-    background-color: #485B51;
+    background-color: #EEECE0;
     z-index: 3;
     position: fixed;
     top: -40px;
@@ -42,9 +41,8 @@ body {
 }
 
 #iconDiv img {
-    height: 140px;
-    width: 140px;
-    margin: 40px 30px;
+    width: 120px;
+    margin: 42px 45px;
 
 }
 
@@ -104,6 +102,7 @@ body {
 
 .mainButtons {
     width: 100%;
+    margin-top: 10%;
 }
 
 .mainButtons div div {
@@ -127,7 +126,7 @@ body {
 }
 
 label {
-    color: #061138;
+    color: #79650d;
     font-size: 25px;
     font-weight: bold;
     margin-top: 10px;
@@ -156,4 +155,13 @@ label {
         font-size: 40px;
 
     }
+
+
+#characterButton input, #classButton input {
+    width: 300px;
+    height: 300px;
+}
+
+.cradsDiv{
+    padding: 4%;
 }
