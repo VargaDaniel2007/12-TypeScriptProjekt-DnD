@@ -11,6 +11,7 @@
 </head>
 
 <body>
+	<div class="z-n1 w-100 h-100 position-absolute" id="background-div"></div>
     <div id="header">
         <div class="titleDiv">
             <h1>D&D characters and classes</h1>
@@ -21,22 +22,22 @@
         <img src="src/images/g5686.svg">
     </div>
 
-    <div id="main">
-        <div class="container mainButtons w-100">
+    <div id="main" class="container p-3 min-vh-100">
+        <div class="mainButtons w-100">
             <div class="row">
-                <div id="characterButton" class="col-6">
-                    <input type="image" src="/src/images/placeholderIconImage.png" name="charButton" class="kerek h-100 select-button">
+                <div id="characterButton" class="col-6 h-100">
+                    <input type="image" src="/src/images/char.svg" name="charButton" class="select-button">
                     <label for="charButton">Characters</label>
                 </div>
-                <div id="classButton" class="col-6">
-                    <input type="image" src="/src/images/placeholderIconImage.png" name="classButton" class="kerek h-100 select-button">
+                <div id="classButton" class="col-6 h-100">
+                    <input type="image" src="/src/images/Class.svg" name="classButton" class="select-button">
                     <label for="classButton">Class</label>
                 </div>
             </div>
         </div>
-        <div class="container row" id="cards"></div>
+        <div class="row mx-auto px-2 mt-4" id="cards"></div>
     
-        <button type="button" class="btn btn-primary" id="create-btn" data-bs-toggle="modal" data-bs-target="#createNewCharacterModal">
+        <button type="button" class="btn btn-primary ms-3 mt-3" id="create-btn" data-bs-toggle="modal" data-bs-target="#createNewCharacterModal">
           Create new
         </button>
 

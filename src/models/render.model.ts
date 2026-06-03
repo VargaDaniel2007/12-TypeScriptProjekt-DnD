@@ -9,7 +9,7 @@ const cards = document.getElementById("cards") as HTMLDivElement;
 
 export async function renderCard(character: Character) {
     const card = document.createElement('div');
-    card.classList.add("col-sm-6", "col-md-3", "kartya");
+    card.classList.add("col-sm-6", "col-md-4", "col-lg-3", "card-div");
     card.innerHTML = `
         <div class="card h-100">
             <div class="card-header" data-bs-toggle="modal" data-bs-target="#${character.id}Modal">
@@ -79,7 +79,7 @@ export async function renderCard(character: Character) {
 
 export async function renderClass(characterClass: Class) {
     const card = document.createElement('div');
-    card.classList.add("col-sm-6", "col-md-3", "kartya");
+    card.classList.add("col-sm-6", "col-md-4","col-lg-3", "card-div");
     card.innerHTML = `
         <div class="card">
             <div class="card-header" data-bs-toggle="modal" data-bs-target="#${characterClass.id}ClassModal">
