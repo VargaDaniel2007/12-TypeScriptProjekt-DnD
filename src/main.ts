@@ -10,12 +10,21 @@ const main = document.getElementById("main") as HTMLDivElement;
 const cards = document.getElementById("cards") as HTMLDivElement;
 const createBtn = document.getElementById('create-btn') as HTMLButtonElement;
 let selected = "charButton";
+const form = document.getElementById('sort-form') as HTMLFormElement;
 
 document.querySelectorAll('.select-button').forEach(e => {
     const element = e as HTMLInputElement;
     element.addEventListener('click', () => {
         selected = element.name;
-        createBtn.dataset.bsTarget = selected == 'charButton' ? "#createNewCharacterModal" : "#createNewClassModal"
+        if (selected == "charButton") {
+            createBtn.dataset.bsTarget = "#createNewCharacterModal";
+            form.classList.remove('d-none')
+        }
+        else {
+            createBtn.dataset.bsTarget = "#createNewClassModal";
+            if (!form.classList.contains('d-none'))
+                form.classList.add('d-none');
+        }
         render();
     })
 });
