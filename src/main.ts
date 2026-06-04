@@ -2,7 +2,7 @@ import type Class from "./models/class.model";
 import type Character from "./models/character.model";
 import { createCharacter, getCharacterList, updateCharacter } from "./components/character.service";
 import { createClass, getClasses, updateClass } from "./components/class.service";
-import { renderCard, renderClass } from "./models/render.model";
+import { renderCard, renderClass, sortItems } from "./models/render.model";
 
 let Classes: Class[] = [];
 let Characters: Character[] = [];
@@ -88,5 +88,18 @@ document.getElementById('newClass-save-btn')!.addEventListener('click', async (e
     document.getElementById('newClass-save-btn')!.dataset.id = "";
     await load();
 });
+
+document.getElementById("sort-by")?.addEventListener("change", sorting);
+document.getElementById("sort-order")?.addEventListener("change", sorting);
+
+function sorting() {
+    const field = (document.getElementById("sort-by") as HTMLSelectElement).value;
+    const order = (document.getElementById("sort-order") as HTMLSelectElement).value as "asc" | "desc";
+
+    Characters = sortItems(Characters, field as keyof Character, order);
+    console.log(Characters);
+
+    render();
+};
 
 await load();

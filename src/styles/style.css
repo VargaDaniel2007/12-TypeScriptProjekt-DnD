@@ -25,14 +25,22 @@ body {
 }
 
 @font-face {
-    font-family: HeaderFont;
+    font-family: IcelandWinterstorm;
     src: url("/src/fonts/IcelandWinterstorm_PERSONAL_USE_ONLY.otf");
+}
+@font-face {
+    font-family: EnchantedLand;
+    src: url("/src/fonts/Enchanted\ Land\ DEMO.otf");
+}
+@font-face {
+    font-family: Medici;
+    src: url("/src/fonts/VictorianText.ttf");
 }
 
 #header h1 {
     color: #EEECE0;
     font-size: 110px;
-    font-family: HeaderFont;
+    font-family: IcelandWinterstorm;
 }
 
 #iconDiv {
@@ -57,7 +65,6 @@ body {
     width: 100%;
     min-height: 750px;
     background-color: #EEECE0;
-    /* margin-top: 250px; */
 }
 
 
@@ -110,6 +117,7 @@ body {
 .mainButtons {
     width: 100%;
     margin-top: 150px;
+    font-family: Medici;
 }
 
 .mainButtons div div {

@@ -35,6 +35,29 @@
                 </div>
             </div>
         </div>
+
+		<form id="sort-form" class="row justify-content-center g-2 mt-3 px-2 d-flex w-100">
+			<div class="col-md-3">
+				<select id="sort-by" class="form-select">
+					<option value="name">Name</option>
+					<option value="class_id">Class</option>
+					<option value="ac">Armor Class</option>
+					<option value="hp">Health Points</option>
+					<option value="strength">Strength</option>
+					<option value="dexterity">Dexterity</option>
+					<option value="intelligence">Intelligence</option>
+					<option value="wisdom">Wisdom</option>
+					<option value="hit_die">Hit Die</option>
+				</select>
+			</div>
+
+			<div class="col-md-2">
+				<select id="sort-order" class="form-select">
+					<option value="asc">Ascending</option>
+					<option value="desc">Descending</option>
+				</select>
+			</div>
+		</form>
         <div class="row mx-auto px-2 mt-4" id="cards"></div>
     
         <button type="button" class="btn btn-primary ms-3 mt-3" id="create-btn" data-bs-toggle="modal" data-bs-target="#createNewCharacterModal">

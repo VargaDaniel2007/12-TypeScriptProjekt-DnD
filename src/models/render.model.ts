@@ -140,3 +140,19 @@ export async function renderClass(characterClass: Class) {
     card.appendChild(modal);
     cards.appendChild(card);
 }
+
+export function sortItems<T>( items: T[], field: keyof T, order: "asc" | "desc" = "asc" ): T[] {
+    return [...items].sort((a, b) => {
+        const aVal = a[field];
+        const bVal = b[field];
+
+        if (typeof aVal == "string" && typeof bVal == "string") {
+            return order === "asc"
+                ? aVal.localeCompare(bVal)
+                : bVal.localeCompare(aVal);
+        }
+        return order === "asc"
+            ? Number(aVal) - Number(bVal)
+            : Number(bVal) - Number(aVal);
+    });
+}
