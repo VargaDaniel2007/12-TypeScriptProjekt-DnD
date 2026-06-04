@@ -100,12 +100,16 @@ document.getElementById('newClass-save-btn')!.addEventListener('click', async (e
 
 document.getElementById("sort-by")?.addEventListener("change", sorting);
 document.getElementById("sort-order")?.addEventListener("change", sorting);
+document.getElementById("character-name")?.addEventListener("change", sorting);
 
-function sorting() {
+async function sorting(e: Event) {
+    e.preventDefault();
+    Characters = await getCharacterList();
     const field = (document.getElementById("sort-by") as HTMLSelectElement).value;
     const order = (document.getElementById("sort-order") as HTMLSelectElement).value as "asc" | "desc";
+    const input = (document.getElementById("character-name") as HTMLInputElement).value
 
-    Characters = sortItems(Characters, field as keyof Character, order);
+    Characters = sortItems(Characters, field as keyof Character, order, input, "name" as keyof Character);
     console.log(Characters);
 
     render();

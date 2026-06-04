@@ -154,8 +154,8 @@ export async function renderClass(characterClass: Class) {
     cards.appendChild(card);
 }
 
-export function sortItems<T>( items: T[], field: keyof T, order: "asc" | "desc" = "asc" ): T[] {
-    return [...items].sort((a, b) => {
+export function sortItems<T>( items: T[], field: keyof T, order: "asc" | "desc" = "asc", filter: string, filtername: keyof T): T[] {
+    let sorted = [...items].sort((a, b) => {
         const aVal = a[field];
         const bVal = b[field];
 
@@ -168,4 +168,5 @@ export function sortItems<T>( items: T[], field: keyof T, order: "asc" | "desc" 
             ? Number(aVal) - Number(bVal)
             : Number(bVal) - Number(aVal);
     });
+    return sorted.filter(x => (x[filtername] as string).toLowerCase().includes(filter.toLowerCase()) )
 }
