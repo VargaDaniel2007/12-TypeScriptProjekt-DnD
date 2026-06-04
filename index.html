@@ -26,7 +26,7 @@
         <div class="mainButtons w-100">
             <div class="row">
                 <div id="characterButton" class="col-6 h-100">
-                    <input type="image" src="/src/images/char.svg" name="charButton" class="select-button">
+                    <input type="image" src="/src/images/bitkép.svg" name="charButton" class="select-button">
                     <label for="charButton">Characters</label>
                 </div>
                 <div id="classButton" class="col-6 h-100">
@@ -60,7 +60,7 @@
 		</form>
         <div class="row mx-auto px-2 mt-4" id="cards"></div>
     
-        <button type="button" class="btn btn-primary ms-3 mt-3" id="create-btn" data-bs-toggle="modal" data-bs-target="#createNewCharacterModal">
+        <button type="button" class="btn btn-primary specialBtn" id="create-btn" data-bs-toggle="modal" data-bs-target="#createNewCharacterModal">
           Create new
         </button>
 
@@ -117,8 +117,8 @@
 								</form>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary" id="newChar-save-btn" data-bs-dismiss="modal">Create character</button>
+								<button type="button" class="btn btn-secondary specialBtn" data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary createCharBtn" id="newChar-save-btn" data-bs-dismiss="modal">Create character</button>
 							</div>
 						</div>
 					</div>
@@ -161,8 +161,8 @@
 								</form>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary" id="newClass-save-btn" data-bs-dismiss="modal">Create class</button>
+								<button type="button" class="btn btn-secondary specialBtn" data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary specialBtn" id="newClass-save-btn" data-bs-dismiss="modal">Create class</button>
 							</div>
 						</div>
 					</div>
